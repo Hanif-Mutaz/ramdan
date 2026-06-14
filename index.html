@@ -800,14 +800,21 @@
 
             .gallery-grid {
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
+                grid-template-rows: none;
+                /* hapus fixed rows */
+                auto-rows: 160px;
+                /* ← tiap row otomatis 160px */
             }
 
+            /* reset semua slot */
             .photo-slot:nth-child(n) {
                 grid-column: auto;
                 grid-row: auto;
+                height: 160px;
+                /* ← explicit height */
             }
 
+            /* foto pertama full width, lebih tinggi */
             .photo-slot:nth-child(1) {
                 grid-column: 1 / 3;
                 height: 250px;
@@ -1039,10 +1046,10 @@
                 <img src="image/7.jpeg" alt="foto 7" onclick="openLightbox(this.src)">
                 <div class="photo-overlay"></div>
             </div>
-            <div class="photo-slot reveal" data-index="7">
+            <!-- <div class="photo-slot reveal" data-index="7">
                 <img src="image/1.jpeg" alt="foto 1" onclick="openLightbox(this.src)">
                 <div class="photo-overlay"></div>
-            </div>
+            </div> -->
         </div>
     </section>
 
